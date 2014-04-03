@@ -1,0 +1,16 @@
+%h1 Coupons
+%table.table.table-bordered
+  %tr
+    %th= 'Название'
+    %th= 'Цена'
+    %th= 'Фото'
+    %th= 'Подробнее'
+  - @coupons.each do |coupon|
+    %tr
+      %td= link_to coupon.name, coupon.url.html_safe
+      %td= coupon.price
+      %td
+        %img{ src: coupon.img }
+      %td= link_to 'подробнсти', coupon_path(coupon)
+
+

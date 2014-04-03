@@ -1,4 +1,6 @@
 CouponService::Application.routes.draw do
+  resources :coupons, only: [:index, :show]
+  root "coupons#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

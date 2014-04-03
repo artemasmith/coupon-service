@@ -1,0 +1,3 @@
+class AdmitadProvider
+
+end
