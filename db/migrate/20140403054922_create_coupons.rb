@@ -10,7 +10,7 @@ class CreateCoupons < ActiveRecord::Migration
       t.string :out_id
       t.integer :provider_id
       t.text :img
-      t.available :boolean
+      t.boolean :available
 
       t.timestamps
     end
