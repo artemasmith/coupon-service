@@ -19,7 +19,7 @@
 
 class Coupon < ActiveRecord::Base
   belongs_to :provider
-  belongs_to :categories
+  belongs_to :category
 
   validates :url, presence: true
   validates :name, presence: true

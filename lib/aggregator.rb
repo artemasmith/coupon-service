@@ -13,5 +13,6 @@ class Aggregator
     coupons = @parser.get_data
     coupons.each { |c| Coupon.create(c) if !Coupon.find_by_out_id(c[:out_id]) }
   end
+  handle_asynchronously :get_coupons
 
 end

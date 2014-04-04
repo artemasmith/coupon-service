@@ -1,16 +1,19 @@
-%h1 Coupons
+%h1 Купоны
 %table.table.table-bordered
   %tr
     %th= 'Название'
     %th= 'Цена'
     %th= 'Фото'
     %th= 'Подробнее'
+    %th= 'Категория'
   - @coupons.each do |coupon|
     %tr
       %td= link_to coupon.name, coupon.url.html_safe
       %td= coupon.price
       %td
-        %img{ src: coupon.img }
+        %img{ src: coupon.img, height: 200, width: 200 }
       %td= link_to 'подробнсти', coupon_path(coupon)
+      %td= coupon.category.name
+= will_paginate @coupons
 
 

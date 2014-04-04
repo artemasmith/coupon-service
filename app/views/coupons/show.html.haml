@@ -1,4 +1,17 @@
-%h1= "Coupon #{@coupon.id}"
-%ul
-  %li= "Название"
-  %li= @coupon.name
+%h1= "Купон #{@coupon.id}"
+%table.table.table-bordered
+  %tr
+    %th Название
+    %th Описание
+    %th Картинка
+    %th Провайдер
+    %th Категория
+  %tr
+    %td= @coupon.name
+    %td= @coupon.description
+    %td
+      %img{ src: @coupon.img, height: 400, width: 400 }
+    %td= @coupon.provider.name
+    %td= @coupon.category.name
+
+= link_to 'Вернуться', coupons_path

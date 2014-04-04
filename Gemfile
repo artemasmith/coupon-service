@@ -6,15 +6,16 @@ gem 'rails', '4.0.0'
 gem 'twitter-bootstrap-rails'
 gem 'nokogiri'
 gem 'rest_client'
+gem 'will_paginate'
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'capybara'
 end
 
 # Use sqlite3 as the database for Active Record
 gem 'pg'
-gem 'delayed_job'
+gem 'delayed_job_active_record'
+gem "daemons"
 gem 'haml-rails'
 
 # Use SCSS for stylesheets
