@@ -15,6 +15,5 @@ class CreateCoupons < ActiveRecord::Migration
       t.timestamps
     end
     add_index :coupons, :name
-    add_index :coupons, :url, unique: true
   end
 end

@@ -11,12 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140403144929) do
+ActiveRecord::Schema.define(version: 20140404155717) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cid"
+    t.integer  "provider_id"
   end
 
   create_table "coupons", force: true do |t|
@@ -35,7 +37,6 @@ ActiveRecord::Schema.define(version: 20140403144929) do
   end
 
   add_index "coupons", ["name"], name: "index_coupons_on_name", using: :btree
-  add_index "coupons", ["url"], name: "index_coupons_on_url", unique: true, using: :btree
 
   create_table "providers", force: true do |t|
     t.string   "name"

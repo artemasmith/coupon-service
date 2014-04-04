@@ -7,8 +7,10 @@
 #  uri        :string(255)
 #  created_at :datetime
 #  updated_at :datetime
+#  key        :text
 #
 
 class Provider < ActiveRecord::Base
   has_many :coupons
+  has_many :categories
 end

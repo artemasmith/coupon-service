@@ -5,6 +5,7 @@ gem 'rails', '4.0.0'
 
 gem 'twitter-bootstrap-rails'
 gem 'nokogiri'
+gem 'rest_client'
 
 group :development, :test do
   gem 'rspec-rails'

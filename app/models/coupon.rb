@@ -23,5 +23,4 @@ class Coupon < ActiveRecord::Base
 
   validates :url, presence: true
   validates :name, presence: true
-  validates :price, presence: true
 end
